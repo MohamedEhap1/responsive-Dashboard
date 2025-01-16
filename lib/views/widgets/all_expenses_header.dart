@@ -7,11 +7,11 @@ class AllExpensesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("All Expenses", style: AppStyles.styleSemiBold20),
-        RangeOptions(),
+        Text("All Expenses", style: AppStyles.styleSemiBold20(context)),
+        const RangeOptions(),
       ],
     );
   }

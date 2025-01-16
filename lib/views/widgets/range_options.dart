@@ -20,9 +20,9 @@ class RangeOptions extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             "Month",
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           const SizedBox(width: 18),
           Transform.rotate(

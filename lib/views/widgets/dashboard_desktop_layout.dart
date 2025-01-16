@@ -16,21 +16,38 @@ class DashboardDesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 3,
-          child: AllExpensesAndQuickInvoiceSection(),
-        ),
-        SizedBox(
-          width: 32,
-        ),
-        Expanded(
-          flex: 2,
-          child: Column(
-            children: [
-              MyCardAndTransactionHistorySection(),
-              SizedBox(
-                height: 24,
+          flex: 5,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40.0),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 32,
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: [
+                          MyCardAndTransactionHistorySection(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Expanded(child: IncomeSection()),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Expanded(child: IncomeSection()),
             ],
           ),
         ),

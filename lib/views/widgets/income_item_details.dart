@@ -11,16 +11,16 @@ class IncomeItemDetails extends StatelessWidget {
     return ListTile(
       leading: CircleAvatar(
         backgroundColor: incomeItemDetailsModel.color,
-        radius: 12,
+        radius: 8,
       ),
       title: Text(
         incomeItemDetailsModel.title,
-        style:
-            AppStyles.styleRegular16.copyWith(color: const Color(0xff208CC8)),
+        style: AppStyles.styleRegular16(context)
+            .copyWith(color: const Color(0xff208CC8)),
       ),
       trailing: Text(
         incomeItemDetailsModel.value,
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }
